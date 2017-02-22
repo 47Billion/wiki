@@ -71,7 +71,7 @@ Please use a fresh Ubuntu 16.04 machine. All instructions have been tested on fr
 
   ``` mongos> sh.status()``` 
 
-> Now, ensure that cluster is stable and has 2 shards. You should see something like this in the response. You must see 2 shards like the one here in bold.  --- Sharding Status ---
+```Now, ensure that cluster is stable and has 2 shards. You should see something like this in the response. You must see 2 shards like the one here in bold.  --- Sharding Status ---
   sharding version: {
 	"_id" : 1,
 	"minCompatibleVersion" : 5,
@@ -89,34 +89,35 @@ Please use a fresh Ubuntu 16.04 machine. All instructions have been tested on fr
 	Failed balancer rounds in last 5 attempts:  0
 	Migration Results for the last 24 hours:
 		No recent migrations
-  databases:  
+  databases:```
 
-4. Now, let’s enable a DB, say Xanadu and enable sharing for it.  
+4. Now, let’s enable a DB, say Xanadu and enable sharing for it.
 
-  mongos> use admin; 
-  mongos> sh.enableSharding(“Xanadu”); {“ok”: 1} 
+  ``` mongos> use admin;``` 
+  ``` mongos> sh.enableSharding(“Xanadu”);``` 
+  > {“ok”: 1}
 
-5. Assign a shard key  
+5. Assign a shard key
 
-  mongos> use Xanadu; 
-  mongos> db.user.createIndex({_id: 1});  
+  ``` mongos> use Xanadu;``` 
+  ``` mongos> db.user.createIndex({_id: 1});``` 
 
-6. Now, shard collection  
+6. Now, shard collection
 
-  mongos> sh.shardCollection( "Xanadu.user", { "_id" : 1 } );
- { "collectionsharded" : "Xanadu.user", "ok" : 1 }  
+  ``` mongos> sh.shardCollection( "Xanadu.user", { "_id" : 1 } );``` 
+  > { "collectionsharded" : "Xanadu.user", "ok" : 1 }
 
 # Run Java Program
 
-1. Keep xanadu_test_mongo.jar and config.properties to workspace directory, xanadu_install 
+1. Copy `xanadu_test_mongo.jar` and `config.properties` to workspace directory, `xanadu_install`
 
-2. Run program  
+2. Run program
 
-  >_ java -jar xanadu_test_mongo.jar 
+  ``` java -jar xanadu_test_mongo.jar``` 
 
 3. Monitor logs -
 
-2017-02-21T00:39:07.253 INFO [com.xanadu.poc.Main] - =>recordCount: 30=>workerCount:2
+```2017-02-21T00:39:07.253 INFO [com.xanadu.poc.Main] - =>recordCount: 30=>workerCount:2
 2017-02-21T00:39:07.422 INFO [org.mongodb.driver.cluster] - Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
 2017-02-21T00:39:07.525 INFO [org.mongodb.driver.connection] - Opened connection [connectionId{localValue:1}] to 127.0.0.1:27017
 .
@@ -127,4 +128,4 @@ Please use a fresh Ubuntu 16.04 machine. All instructions have been tested on fr
 2017-02-21T00:39:08.154 INFO [com.xanadu.poc.Main] - =>main() Reading records complete @:1487666348154
 2017-02-21T00:39:08.154 INFO [com.xanadu.poc.Main] - =>main() Time taken writer:307 ms
 2017-02-21T00:39:08.154 INFO [com.xanadu.poc.Main] - =>main() Time taken reader:24 ms
-
+```
