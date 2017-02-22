@@ -4,15 +4,19 @@ Please use a fresh Ubuntu 16.04 machine. All instructions have been tested on fr
 
 1. Use sudo (Must switch to root privilege)  
 
-  > sudo -i 
+  > sudo -i
 
-2. Install Java  
+2. Install Java
 
-  > apt-get update 
-  > add-apt-repository ppa:webupd8team/java 
-  > apt-get update 
-  > apt-get install -y oracle-java8-installer        // You must accept Oracle License  
-  > apt-get install -y oracle-java8-set-default 
+  > apt-get update
+  
+  > add-apt-repository ppa:webupd8team/java
+  
+  > apt-get update
+  
+  > apt-get install -y oracle-java8-installer      // You must accept Oracle License
+  
+  > apt-get install -y oracle-java8-set-default
 
 3. Very Java
 
