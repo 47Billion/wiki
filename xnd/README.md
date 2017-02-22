@@ -67,7 +67,7 @@ Please use a fresh *Ubuntu 16.04* machine. All instructions have been tested on 
 
 2. Connect to MongoS shell
 
-  ``` mongo —-host 127.0.0.1 —-port 27017``` 
+  ``` mongo --host 127.0.0.1 --port 27017``` 
 
 3. Check status
 
