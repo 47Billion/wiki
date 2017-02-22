@@ -1,0 +1,111 @@
+version: '2'
+services:
+  mongo-s-01:
+      image: satishsverma/mongodb-images
+      ulimits:
+        nofile:
+          soft: 500000
+          hard: 1000000
+      command: dumb-init init-s.sh
+      restart: always
+      ports:
+        - "27017:27017"
+      depends_on:
+        - mongo-c-01
+        - mongo-c-02
+        - mongo-c-03
+        - mongo-d-01
+        - mongo-d-02
+        - mongo-ab
+        - mongo-d1-01
+        - mongo-d1-02
+        - mongo-ab1
+     
+  mongo-c-01:
+      image: satishsverma/mongodb-images
+      ulimits:
+        nofile:
+          soft: 500000
+          hard: 1000000
+      command: dumb-init mongo-c.sh 
+      depends_on:
+        - mongo-d-01
+        - mongo-d-02
+        - mongo-ab
+      restart: always
+
+  mongo-c-02:
+      image: satishsverma/mongodb-images
+      ulimits:
+        nofile:
+          soft: 500000
+          hard: 1000000
+      command: dumb-init mongo-c.sh
+      depends_on:
+        - mongo-d-01
+        - mongo-d-02
+        - mongo-ab
+      restart: always
+
+  mongo-c-03:
+      image: satishsverma/mongodb-images
+      ulimits:
+        nofile:
+          soft: 500000
+          hard: 1000000
+      command: dumb-init mongo-c.sh
+      depends_on:
+        - mongo-d-01
+        - mongo-d-02
+        - mongo-ab
+      restart: always
+
+  mongo-d-01:
+      image: satishsverma/mongodb-images
+      ulimits:
+        nofile:
+          soft: 500000
+          hard: 1000000
+      command: dumb-init init-rep.sh 1
+      restart: always
+  mongo-d-02:
+      image: satishsverma/mongodb-images
+      ulimits:
+        nofile:
+          soft: 500000
+          hard: 1000000
+      command: dumb-init init-rep.sh
+      restart: always
+  mongo-ab:
+      image: satishsverma/mongodb-images
+      ulimits:
+        nofile:
+          soft: 500000
+          hard: 1000000
+      command: dumb-init init-rep.sh
+      restart: always
+      
+  mongo-d1-01:
+      image: satishsverma/mongodb-images
+      ulimits:
+        nofile:
+          soft: 500000
+          hard: 1000000
+      command: dumb-init init-rep1.sh 1
+      restart: always
+  mongo-d1-02:
+      image: satishsverma/mongodb-images
+      ulimits:
+        nofile:
+          soft: 500000
+          hard: 1000000
+      command: dumb-init init-rep1.sh
+      restart: always
+  mongo-ab1:
+      image: satishsverma/mongodb-images
+      ulimits:
+        nofile:
+          soft: 500000
+          hard: 1000000
+      command: dumb-init init-rep1.sh
+      restart: always
