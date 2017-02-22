@@ -35,41 +35,43 @@ Please use a fresh Ubuntu 16.04 machine. All instructions have been tested on fr
 
 5. Verify Docker Installation
 
-  > docker ps
+  ``` docker ps``` 
 
 # Mongo Cluster Setup
 
 1. Create workspace
 
-  > mkdir xanadu_install
-  > cd xanadu_install
+  ``` mkdir xanadu_install``` 
+  
+  ``` cd xanadu_install``` 
 
-2. Copy docker-compose.yaml to workspace directory, xanadu_install
+2. Copy `docker-compose.yaml` to workspace directory, `xanadu_install`
 
 3. Setup cluster
 
-  >_ docker-compose up -d    
-// Please wait for 3-4 mins to let Mongo Install
+  ``` docker-compose up -d ``` 
+  > Please wait for 3-4 mins to let Mongo Install
 
 4. Verify Cluster Setup
 
-    >_ docker ps  // You should see 10 docker containers running now.
+  ``` docker ps``` 
+  > You should see 10 docker containers running now.
 
 # Mongo DB Setup
 
-1. Connect to MongoS  
+1. Connect to MongoS
 
-  >_ docker exec -it xanaduinstall_mongo-s-01_1 bash 
+  ``` docker exec -it xanaduinstall_mongo-s-01_1 bash``` 
 
-2. Connect to MongoS shell 
+2. Connect to MongoS shell
 
-  >_ mongo —-host 127.0.0.1 —-port 27017 
+  ``` mongo —-host 127.0.0.1 —-port 27017``` 
 
 3. Check status
 
-  mongos> sh.status() 
+  ``` mongos> sh.status()``` 
 
-Now, ensure that cluster is stable and has 2 shards. You should see something like this in the response. You must see 2 shards like the one here in bold.  --- Sharding Status ---
+> Now, ensure that cluster is stable and has 2 shards. You should see something like this in the response. You must see 2 shards like the one here in bold.  --- Sharding Status ---
   sharding version: {
 	"_id" : 1,
 	"minCompatibleVersion" : 5,
