@@ -96,17 +96,20 @@ Now, ensure that cluster is stable and has 2 shards. You should see something li
 4. Now, let’s enable a DB, say Xanadu and enable sharing for it.
 
   ``` mongos> use admin;``` 
+  
   ``` mongos> sh.enableSharding(“Xanadu”);``` 
   > {“ok”: 1}
 
 5. Assign a shard key
 
   ``` mongos> use Xanadu;``` 
+  
   ``` mongos> db.user.createIndex({_id: 1});``` 
 
 6. Now, shard collection
 
   ``` mongos> sh.shardCollection( "Xanadu.user", { "_id" : 1 } );``` 
+  
   > { "collectionsharded" : "Xanadu.user", "ok" : 1 }
 
 # Run Java Program
