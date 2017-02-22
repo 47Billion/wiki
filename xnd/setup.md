@@ -4,43 +4,44 @@ Please use a fresh Ubuntu 16.04 machine. All instructions have been tested on fr
 
 1. Use sudo (Must switch to root privilege)  
 
-  >_ sudo -i 
+  > sudo -i 
 
 2. Install Java  
 
-  >_ apt-get update 
-  >_ add-apt-repository ppa:webupd8team/java 
-  >_ apt-get update 
-  >_ apt-get install -y oracle-java8-installer        // You must accept Oracle License  
-  >_ apt-get install -y oracle-java8-set-default 
+  > apt-get update 
+  > add-apt-repository ppa:webupd8team/java 
+  > apt-get update 
+  > apt-get install -y oracle-java8-installer        // You must accept Oracle License  
+  > apt-get install -y oracle-java8-set-default 
 
 3. Very Java
 
-    >_ javac -version 
+  > javac -version
 
-4. Install Docker  
+4. Install Docker
 
-  >_ apt-get install -y curl
-  >_ curl -sSL https://get.docker.com/ | sh  
-  >_ curl -L "https://github.com/docker/compose/releases/download/1.9.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose  
-  >_ chmod +x /usr/local/bin/docker-compose 
+  > apt-get install -y curl
+  > curl -sSL https://get.docker.com/ | sh
+  > curl -L "https://github.com/docker/compose/releases/download/1.9.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  > chmod +x /usr/local/bin/docker-compose 
 
-5. Verify Docker Installation  
+5. Verify Docker Installation
 
-  >_ docker ps 
+  > docker ps
 
-# Mongo Cluster Setup 
+# Mongo Cluster Setup
 
-1. Create workspace  
+1. Create workspace
 
-  >_ mkdir xanadu_install 
-  >_ cd xanadu_install 
+  > mkdir xanadu_install
+  > cd xanadu_install
 
-2. Copy docker-compose.yaml to workspace directory, xanadu_install 
+2. Copy docker-compose.yaml to workspace directory, xanadu_install
 
 3. Setup cluster
 
-    >_ docker-compose up -d  // Please wait for 3-4 mins to let Mongo Install
+  >_ docker-compose up -d    
+// Please wait for 3-4 mins to let Mongo Install
 
 4. Verify Cluster Setup
 
