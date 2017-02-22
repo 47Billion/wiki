@@ -1,4 +1,4 @@
-Please use a fresh Ubuntu 16.04 machine. All instructions have been tested on fresh Ubuntu 16.04
+Please use a fresh *Ubuntu 16.04* machine. All instructions have been tested on fresh Ubuntu 16.04
 
 # System Installation
 
@@ -97,8 +97,8 @@ Now, ensure that cluster is stable and has 2 shards. You should see something li
 
   ``` mongos> use admin;``` 
   
-  ``` mongos> sh.enableSharding(“Xanadu”);``` 
-  > {“ok”: 1}
+  ``` mongos> sh.enableSharding("Xanadu");``` 
+  > {"ok": 1}
 
 5. Assign a shard key
 
@@ -111,6 +111,10 @@ Now, ensure that cluster is stable and has 2 shards. You should see something li
   ``` mongos> sh.shardCollection( "Xanadu.user", { "_id" : 1 } );``` 
   
   > { "collectionsharded" : "Xanadu.user", "ok" : 1 }
+
+7. Exit MongoS shell - using ctl-c or type exit
+
+8. Exit Docker Instance - type exit
 
 # Run Java Program
 
