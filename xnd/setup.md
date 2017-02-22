@@ -71,7 +71,8 @@ Please use a fresh Ubuntu 16.04 machine. All instructions have been tested on fr
 
   ``` mongos> sh.status()``` 
 
-```Now, ensure that cluster is stable and has 2 shards. You should see something like this in the response. You must see 2 shards like the one here in bold.  --- Sharding Status ---
+```text
+Now, ensure that cluster is stable and has 2 shards. You should see something like this in the response. You must see 2 shards like the one here in bold.  --- Sharding Status ---
   sharding version: {
 	"_id" : 1,
 	"minCompatibleVersion" : 5,
@@ -89,7 +90,8 @@ Please use a fresh Ubuntu 16.04 machine. All instructions have been tested on fr
 	Failed balancer rounds in last 5 attempts:  0
 	Migration Results for the last 24 hours:
 		No recent migrations
-  databases:```
+  databases:
+  ```
 
 4. Now, let’s enable a DB, say Xanadu and enable sharing for it.
 
