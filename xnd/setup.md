@@ -15,7 +15,7 @@ Please use a fresh Ubuntu 16.04 machine. All instructions have been tested on fr
   ``` apt-get update``` 
   
   ``` apt-get install -y oracle-java8-installer ```     
-  // You must accept Oracle License
+  `You must accept Oracle License`
   
   ``` apt-get install -y oracle-java8-set-default``` 
 
