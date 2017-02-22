@@ -14,20 +14,24 @@ Please use a fresh Ubuntu 16.04 machine. All instructions have been tested on fr
 
   ``` apt-get update``` 
   
-  > apt-get install -y oracle-java8-installer      // You must accept Oracle License
+  ``` apt-get install -y oracle-java8-installer ```     
+  // You must accept Oracle License
   
-  > apt-get install -y oracle-java8-set-default
+  ``` apt-get install -y oracle-java8-set-default``` 
 
 3. Very Java
 
-  > javac -version
+  ``` javac -version``` 
 
 4. Install Docker
 
-  > apt-get install -y curl
-  > curl -sSL https://get.docker.com/ | sh
-  > curl -L "https://github.com/docker/compose/releases/download/1.9.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-  > chmod +x /usr/local/bin/docker-compose 
+  ``` apt-get install -y curl``` 
+  
+  ``` curl -sSL https://get.docker.com/ | sh``` 
+  
+  ``` curl -L "https://github.com/docker/compose/releases/download/1.9.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose``` 
+  
+  ``` chmod +x /usr/local/bin/docker-compose``` 
 
 5. Verify Docker Installation
 
