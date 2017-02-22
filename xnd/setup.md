@@ -137,7 +137,7 @@ Now, ensure that cluster is stable and has 2 shards. You should see something li
 ```text
 2017-02-21T00:39:07.253 INFO [com.xanadu.poc.Main] - =>recordCount: 30=>workerCount:2
 2017-02-21T00:39:07.422 INFO [org.mongodb.driver.cluster] - Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-> 2017-02-21T00:39:07.525 INFO [org.mongodb.driver.connection] - Opened connection [connectionId{localValue:1}] to 127.0.0.1:27017
+2017-02-21T00:39:07.525 INFO [org.mongodb.driver.connection] - Opened connection [connectionId{localValue:1}] to 127.0.0.1:27017
 .
 .
 .
