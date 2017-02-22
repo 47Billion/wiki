@@ -10,7 +10,7 @@ Please use a fresh *Ubuntu 16.04* machine. All instructions have been tested on 
 
   ``` apt-get update```
 
-  ``` add-apt-repository ppa:webupd8team/java ``` 
+  ``` add-apt-repository -y ppa:webupd8team/java ``` 
 
   ``` apt-get update``` 
   
@@ -123,6 +123,10 @@ Now, ensure that cluster is stable and has 2 shards. You should see something li
 # Run Java Program
 
 1. Copy `xanadu_test_mongo.jar` and `config.properties` to workspace directory, `xanadu_install`
+
+  ``` wget https://raw.githubusercontent.com/47Billion/wiki/master/xnd/xanadu_test_mongo.jar```
+  
+  ``` wget https://raw.githubusercontent.com/47Billion/wiki/master/xnd/config.properties```
 
 2. Run program
 
