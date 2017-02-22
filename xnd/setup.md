@@ -117,14 +117,16 @@ Please use a fresh Ubuntu 16.04 machine. All instructions have been tested on fr
 
 3. Monitor logs -
 
-> 2017-02-21T00:39:07.253 INFO [com.xanadu.poc.Main] - =>recordCount: 30=>workerCount:2
-> 2017-02-21T00:39:07.422 INFO [org.mongodb.driver.cluster] - Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+```text
+2017-02-21T00:39:07.253 INFO [com.xanadu.poc.Main] - =>recordCount: 30=>workerCount:2
+2017-02-21T00:39:07.422 INFO [org.mongodb.driver.cluster] - Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
 > 2017-02-21T00:39:07.525 INFO [org.mongodb.driver.connection] - Opened connection [connectionId{localValue:1}] to 127.0.0.1:27017
-> .
-> .
-> .
+.
+.
+.
 .
 2017-02-21T00:39:08.153 INFO [org.mongodb.driver.connection] - Closed connection [connectionId{localValue:8}] to 127.0.0.1:27017 because the pool has been closed.
 2017-02-21T00:39:08.154 INFO [com.xanadu.poc.Main] - =>main() Reading records complete @:1487666348154
 2017-02-21T00:39:08.154 INFO [com.xanadu.poc.Main] - =>main() Time taken writer:307 ms
 2017-02-21T00:39:08.154 INFO [com.xanadu.poc.Main] - =>main() Time taken reader:24 ms
+```
