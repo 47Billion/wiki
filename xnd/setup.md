@@ -27,6 +27,8 @@ Please use a fresh *Ubuntu 16.04* machine. All instructions have been tested on 
 
   ``` apt-get install -y curl``` 
   
+  ``` apt-get install -y wget``` 
+  
   ``` curl -sSL https://get.docker.com/ | sh``` 
   
   ``` curl -L "https://github.com/docker/compose/releases/download/1.9.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose``` 
@@ -46,6 +48,8 @@ Please use a fresh *Ubuntu 16.04* machine. All instructions have been tested on 
   ``` cd xanadu_install``` 
 
 2. Copy `docker-compose.yaml` to workspace directory, `xanadu_install`
+
+  ``` wget https://raw.githubusercontent.com/47Billion/wiki/master/xnd/docker-compose.yaml ```
 
 3. Setup cluster
 
