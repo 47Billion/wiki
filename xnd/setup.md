@@ -9,7 +9,9 @@ Please use a fresh Ubuntu 16.04 machine. All instructions have been tested on fr
 2. Install Java
 
 ``` apt-get update```
+
 ``` add-apt-repository ppa:webupd8team/java ``` 
+
 ``` apt-get update``` 
   
   > apt-get install -y oracle-java8-installer      // You must accept Oracle License
