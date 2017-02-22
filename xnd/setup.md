@@ -128,4 +128,4 @@ Please use a fresh Ubuntu 16.04 machine. All instructions have been tested on fr
 2017-02-21T00:39:08.154 INFO [com.xanadu.poc.Main] - =>main() Reading records complete @:1487666348154
 2017-02-21T00:39:08.154 INFO [com.xanadu.poc.Main] - =>main() Time taken writer:307 ms
 2017-02-21T00:39:08.154 INFO [com.xanadu.poc.Main] - =>main() Time taken reader:24 ms
-
+ 
